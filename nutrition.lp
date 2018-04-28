@@ -1,6 +1,6 @@
 /*
 *  detail nurtition of food
-*  format is "foodName, calories, protein, fat, carbohydrate" 
+*  format is "foodName, calories, protein, fat, carbohydrate"
 *  calories, protein, fat, carbohydrate based on 100gram.
 */
 
@@ -59,7 +59,7 @@ nurition(milk,42,3.4,1,5).
 nurition(almondMilk,17,0.6,1.5,0.6).
 nurition(egg,155,13,11,1.1).
 
-% 
+%
 nutrition(oil,884,0,100,0).
 nutrition(butter,717,0.9,81,0.1).
 
@@ -85,6 +85,11 @@ pork(porkLoin).
 pork(bacon).
 pork(groundPork_96).
 pork(groundPork_72).
+
+meat(X) :- beef(X).
+meat(X) :- chicken(X).
+meat(X) :- fish(X).
+meat(X) :- pork(X).
 
 vegetable(mixedVegetables).
 vegetable(broccoli).
