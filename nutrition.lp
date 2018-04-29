@@ -5,59 +5,59 @@
 */
 
 % beef
-nurition(groundBeef_85p,250,26,15,0).
-nurition(groundBeef_70p,332,14,30,0).
-nurition(ribeyeSteak,291,24,22,0).
-nurition(brisket,155,21,7,0).
+nutrition(groundBeef_85p,250,26,15,0).
+nutrition(groundBeef_70p,332,14,30,0).
+nutrition(ribeyeSteak,291,24,22,0).
+nutrition(brisket,155,21,7,0).
 
 % chicken
-nurition(chickenBreast,124,31,3.6,0).
-nurition(chickenThigh,177,24,8,0).
+nutrition(chickenBreast,124,31,3.6,0).
+nutrition(chickenThigh,177,24,8,0).
 
 % fish
-nurition(salmon,206,22,12,0).
-nurition(halibut,186,14,14,0).
-nurition(trout,141,20,6,0).
-nurition(tuna,132,28,1.3,0).
-nurition(tilapia,129,26,2.7,0).
+nutrition(salmon,206,22,12,0).
+nutrition(halibut,186,14,14,0).
+nutrition(trout,141,20,6,0).
+nutrition(tuna,132,28,1.3,0).
+nutrition(tilapia,129,26,2.7,0).
 
 % pork
-nurition(porkLoin,143,21,5,0).
-nurition(bacon,541,37,42,0).
-nurition(groundPork_96,185,32,6,0).
-nurition(groundPork_72,393,23,33,0).
+nutrition(porkLoin,143,21,5,0).
+nutrition(bacon,541,37,42,0).
+nutrition(groundPork_96,185,32,6,0).
+nutrition(groundPork_72,393,23,33,0).
 
 % vegetable
-nurition(mixedVegetables,49,3.3,0.8,47.2).
-nurition(broccoli,34,2.8,0.4,7).
-nurition(kale,49,4.3,0.9,9).
-nurition(carrot,41,0.9,0.2,10).
-nurition(brusselSprout,43,3.4,0.3,9).
+nutrition(mixedVegetables,49,3.3,0.8,47.2).
+nutrition(broccoli,34,2.8,0.4,7).
+nutrition(kale,49,4.3,0.9,9).
+nutrition(carrot,41,0.9,0.2,10).
+nutrition(brusselSprout,43,3.4,0.3,9).
 
 
-nurition(spinach,23,2.9,0.4,3.6).
-nurition(arugula,25,2.6,0.7,3.7).
+nutrition(spinach,23,2.9,0.4,3.6).
+nutrition(arugula,25,2.6,0.7,3.7).
 
 % grain
-nurition(potato,77,2,0.1,17).
-nurition(rice,130,2.7,0.3,28).
-nurition(pasta,131,5,1.1,25).
-nurition(bread,250,10,1.5,49).
-nurition(beans,339,21,0.9,63).
-nurition(tofu,76,8,4.8,1.9).
+nutrition(potato,77,2,0.1,17).
+nutrition(rice,130,2.7,0.3,28).
+nutrition(pasta,131,5,1.1,25).
+nutrition(bread,250,10,1.5,49).
+nutrition(beans,339,21,0.9,63).
+nutrition(tofu,76,8,4.8,1.9).
 
 % fruit
-nurition(apple,52,0.3,0.2,14).
-nurition(grapes,67,0.6,0.4,17).
-nurition(strawberry,33,0.7,0.3,8).
-nurition(blueberry,57,0.7,0.3,14).
-nurition(avocado,160,13,11,1).
+nutrition(apple,52,0.3,0.2,14).
+nutrition(grapes,67,0.6,0.4,17).
+nutrition(strawberry,33,0.7,0.3,8).
+nutrition(blueberry,57,0.7,0.3,14).
+nutrition(avocado,160,13,11,1).
 
 
 % dairy
-nurition(milk,42,3.4,1,5).
-nurition(almondMilk,17,0.6,1.5,0.6).
-nurition(egg,155,13,11,1.1).
+nutrition(milk,42,3.4,1,5).
+nutrition(cheddar,402,25,33,1.3).
+nutrition(egg,155,13,11,1.1).
 
 %
 nutrition(oil,884,0,100,0).
@@ -113,7 +113,7 @@ fruit(blueberry).
 fruit(avocado).
 
 dairy(milk).
-dairy(almondMilk).
+dairy(cheddar).
 dairy(egg).
 
 seasoning(oil).
