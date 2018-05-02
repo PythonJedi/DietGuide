@@ -1,75 +1,72 @@
 /*
-*  detail nurtition of food
-*  format is "foodName, calories, protein, fat, carbohydrate"
-*  calories, protein, fat, carbohydrate based on 100gram.
+*  detail nutrition values of food
+*  format is "foodName, calories, protein, fat, carbohydrate" 
+*  calories, protein, fat, carbohydrate based on 1 oz.
+*  All data from google
 */
 
 % beef
-nutrition(groundBeef_85p,250,26,15,0).
-nutrition(groundBeef_70p,332,14,30,0).
-nutrition(ribeyeSteak,291,24,22,0).
-nutrition(brisket,155,21,7,0).
+nutrition(groundBeef_80,72,5,0,6).
+nutrition(steak, 60, 7, 0, 3).
+nutrition(brisket,44,6,0,2.1).
 
 % chicken
-nutrition(chickenBreast,124,31,3.6,0).
-nutrition(chickenThigh,177,24,8,0).
+nutrition(chickenBreast,47,9,0,1).
+nutrition(chickenThigh,33,6,0,1).
 
 % fish
-nutrition(salmon,206,22,12,0).
-nutrition(halibut,186,14,14,0).
-nutrition(trout,141,20,6,0).
-nutrition(tuna,132,28,1.3,0).
-nutrition(tilapia,129,26,2.7,0).
+nutrition(salmon,48,6,0,3).
+nutrition(halibut,27,5,0,0).
+nutrition(trout,54,8,0,2.3).
+nutrition(tuna,52,8,0,1.6).
+nutrition(tilapia,25,5,0,1).
 
 % pork
-nutrition(porkLoin,143,21,5,0).
-nutrition(bacon,541,37,42,0).
-nutrition(groundPork_96,185,32,6,0).
-nutrition(groundPork_72,393,23,33,0).
+nutrition(porkLoin,68,7.6,0,4).
+nutrition(bacon,117,3.5,0.4,11).
+nutrition(groundPork_96,52,9,0.2,1.8).
+nutrition(groundPork_72,111,6.5,0.4,9).
 
 % vegetable
-nutrition(mixedVegetables,49,3.3,0.8,47.2).
-nutrition(broccoli,34,2.8,0.4,7).
-nutrition(kale,49,4.3,0.9,9).
-nutrition(carrot,41,0.9,0.2,10).
-nutrition(brusselSprout,43,3.4,0.3,9).
-
-
-nutrition(spinach,23,2.9,0.4,3.6).
-nutrition(arugula,25,2.6,0.7,3.7).
+nutrition(broccoli,11,0.9,2.1,0.1).
+nutrition(kale,12,1.1,2.2,0.2).
+nutrition(carrot,12,0.3,3,0.05).
+nutrition(brusselSprout,13,1,2.6,0.1).
+nutrition(lettuce,0.6,0.06,0.15,0.01)
+nutrition(spinach,7,0.9,1.1,0.1).
+nutrition(arugula,7,0.73,1,0.2).
 
 % grain
-nutrition(potato,77,2,0.1,17).
-nutrition(rice,130,2.7,0.3,28).
-nutrition(pasta,131,5,1.1,25).
-nutrition(bread,250,10,1.5,49).
-nutrition(beans,339,21,0.9,63).
-nutrition(tofu,76,8,4.8,1.9).
+nutrition(potato,27,0.42,3.61,1.26).
+nutrition(rice,37,0.67,8.14,0.05).
+nutrition(pasta,28,1,5,0.12).
+nutrition(bread,79,2.7,15,1).
+nutrition(beans,80,5,15,0.3).
+nutrition(tofu,23,2.5,0.6,1.5).
 
 % fruit
-nutrition(apple,52,0.3,0.2,14).
-nutrition(grapes,67,0.6,0.4,17).
-nutrition(strawberry,33,0.7,0.3,8).
-nutrition(blueberry,57,0.7,0.3,14).
-nutrition(avocado,160,13,11,1).
+nutrition(apple,8,0,2,0). 
+nutrition(grapes,8,0.1,2,0).
+nutrition(strawberry,5,0.1,1.3,0).
+nutrition(Banana,17,10.2,4,0).
+nutrition(avocado,30,0.36,1.6,2.6).
+nutrition(mango,12,0.2,3,0.1).
 
 
 % dairy
-nutrition(milk,42,3.4,1,5).
-nutrition(cheddar,402,25,33,1.3).
-nutrition(egg,155,13,11,1.1).
+nutrition(milk,18,1,1.5,1).
+nutrition(cheese,113,7,0.4,9).
+nutrition(egg,26,2,0.2,1.7).
 
-%
-nutrition(oil,884,0,100,0).
-nutrition(butter,717,0.9,81,0.1).
+% 
+nutrition(oil,240,0,0,27).
+nutrition(butter,203,0.2,0,23).
 
 
 
 %% Cateories
-
-beef(groundBeef_85).
-beef(groundBeef_70).
-beef(ribeyeSteak).
+beef(groundBeef_80).
+beef(steak).
 beef(brisket).
 
 chicken(chickenBreast).
@@ -86,18 +83,13 @@ pork(bacon).
 pork(groundPork_96).
 pork(groundPork_72).
 
-meat(X) :- beef(X).
-meat(X) :- chicken(X).
-meat(X) :- fish(X).
-meat(X) :- pork(X).
-
-vegetable(mixedVegetables).
 vegetable(broccoli).
 vegetable(kale).
 vegetable(carrot).
 vegetable(brusselSprout).
 vegetable(spinach).
 vegetable(arugula).
+vegetable(lettuce)
 
 grain(potato).
 grain(rice).
@@ -113,8 +105,14 @@ fruit(blueberry).
 fruit(avocado).
 
 dairy(milk).
-dairy(cheddar).
+dairy(cheese).
 dairy(egg).
 
 seasoning(oil).
 seasoning(butter).
+
+meat(X): beef(X).
+meat(X): pork(X).
+meat(X): fish(X).
+
+
