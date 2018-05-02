@@ -1,9 +1,12 @@
 /*
- *  detail nutrition values of food
- *  format is "foodName, calories, protein, fat, carbohydrate"
- *  calories, protein, carbohydrate, fat based on 1 oz-eq.
- *  Data from google, https://www.aqua-calc.com/calculate/food-volume-to-weight
- */
+*  detail nutrition values of food
+*  format is "foodName, calories, protein, fat, carbohydrate"
+*  calories, protein, fat, carbohydrate based on 1 oz.
+*  All data from google
+*  calories, Protein/ oz-eq, Dairy/ c-eq, Oil/ g, Vegetables/ c-eq, Fruits/ c-eq, Grains/ oz-eq
+*
+*/
+
 
 % beef
 nutrition(groundBeef_80,72,5,0,6).
@@ -29,48 +32,40 @@ nutrition(groundPork_72,111,6.5,0.4,9).
 
 nutrition(egg,78,6,5,0.6). % an oz-eq of egg is 1 egg
 
-nutrition(tofu,47,5,1.15,3). % an oz-eq of tofu is 1/4 cup
+% vegetable c-eq
+nutrition(broccoli,31,2.6,6,0.3).
+nutrition(kale,66,5.8,12,1.2).
+nutrition(carrot,50,1.1,12,0.3).
+nutrition(brusselSprout,38,3,8,0.3).
+nutrition(lettuce,10,1,2,0.2).
+nutrition(spinach,14,1.8,2.2,0.2).
+nutrition(arugula,12,1.2,1.6,0.4).
 
-/*
- *  Due to some issues with sourcing data and unit conversions, vegetable,
- *  fruit, grain, and diary are measured in fluid ounces (1/8 cup), not weight
- *  ounces (1/16 lb). Except they're actually measures in fluid ounce
- *  equivalents since 1/2 cup of dried vegetable counts for the same as 2 cups
- *  of leafy green vegetable.
- */
+% grain oz-eq
+nutrition(potato,27,0.42,3.61,1.26).
+nutrition(rice,37,0.67,8.14,0.05).
+nutrition(pasta,28,1,5,0.12).
+nutrition(bread,79,2.7,15,1).
+nutrition(beans,80,5,15,0.3).
+nutrition(tofu,23,2.5,0.6,1.5).
 
-% vegetables
-nutrition(broccoli,2,0.26,0.45,0.03).
-nutrition(kale,1,0.09,0.18,0.02).
-nutrition(brusselSprout,5,0.37,0.98,0.03).
-nutrition(lettuce,2,0.19,0.31,0.03). % lettuce floz-eq are 2 floz
-nutrition(spinach,11,1.23,1.71,0.22). % spinach floz-eq are 2 floz
-nutrition(arugula,1,0.13,0.18,0.03). % arugula floz-eq are 2 floz
-nutrition(potato,14,0.3,3.29,0.02).
-
-% grain
-nutrition(rice,85,1.74,17.63,0.74).
-nutrition(pasta,54,2.12,11.19,0.45).
-nutrition(bread,15,0.5,2.78,0.19).
-nutrition(beans,82,5.5,14.95,0.26).
-
-
-% fruit
-nutrition(apple,8.125,0.375,2.125,0.025).
-nutrition(grapes,7.75,0.1,2,0).
-nutrition(strawberry,5,0.1,1.3,0).
-nutrition(banana,17,10.2,4,0).
-nutrition(avocado,30,0.36,1.6,2.6).
-nutrition(mango,12,0.2,3,0.1).
+% fruit c-eq
+nutrition(apple,57,0.3,15,0.2).
+nutrition(grapes,62,0.6,16,0.3).
+nutrition(strawberry,47,1,11,0.4).
+nutrition(banana,133,1.6,34,0.5).
+nutrition(avocado,234,2.9,12,21).
+nutrition(mango,99,1.4,25,0.6).
 
 
-% dairy
-nutrition(milk,12.875,1,1.5,0.6125).
-nutrition(cheese,113,7,0.4,9).
+% dairy c-eq
+nutrition(milk,244,8,12,8).
+nutrition(cheese,455,28,1.4,37).
 
-% oils
-nutrition(vegetableOil,240,0,0,27).
-nutrition(butter,203,0.2,0,23).
+
+% oil  g
+nutrition(vegetableOil,8.84,0,0,1).
+nutrition(butter,7.17,0.09,0,0.81).
 
 %% Cateories
 beef(groundBeef_80).
@@ -93,7 +88,7 @@ pork(groundPork_72).
 
 vegetable(broccoli).
 vegetable(kale).
-%vegetable(carrot).
+vegetable(carrot).
 vegetable(brusselSprout).
 vegetable(spinach).
 vegetable(arugula).
