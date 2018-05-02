@@ -27,3 +27,8 @@ _member(X, [_|Sublist]) :- _member(X, Sublist).
 _select(Element, [Element|List], List).
 _select(Element, [Stays|Sublist], [Stays|Remainder]) :-
     _select(Element, Sublist, Remainder).
+
+sum([], 0).
+sum([X|List], Sum) :-
+    sum(List, SubSum),
+    Sum is SubSum + X.
