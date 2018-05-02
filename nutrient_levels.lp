@@ -1,10 +1,9 @@
 /*
- *  Protein, Carbohydrate, Fat for each calorie level in each eating plan.
- *
- *  Protein, Carbs, and Fat are measured in grams, Calories are approx. kcal
- */
-
-% nutrients(Plan, Calories, Protien, Carbs, Fat)
+*  Protein, Carbohydrate, Fat for each calorie level in each eating plan.
+*
+*  Protein, Carbs, and Fat are measured in grams, Calories are approx. kcal
+*
+* nutrients(Plan, Calories, Protien, Carbs, Fat)
 * nutrients(standard, 1000, 44, 129, 37).
 * nutrients(standard, 1200, 59, 155, 41).
 * nutrients(standard, 1600, 78, 197, 54).
@@ -17,23 +16,24 @@
 * nutrients(standard, 3000, 120, 391, 113).
 * nutrients(standard, 3200, 120, 407, 128).
 * nutrients(standard, 1400, 69, 186, 45).
+*/
 
 /*
-*  calories, Protein, vegetables, grains, fruits, oil
-*
+*  calories, Protein, Dairy, Oil, Vegetables, Fruits, Grains
+*  Unit by oz
 */
 
 
 
-nutrients(standard, 1000, 2, 1, 3, 1, 0.5).
-nutrients(standard, 1200,)
-nutrients(standard,)
-nutrients(standard,)
-nutrients(standard,)
-nutrients(standard,)
-nutrients(standard,)
-nutrients(standard,)
-nutrients(standard,)
-nutrients(standard,)
-nutrients(standard,)
-nutrients(standard,)
+nutrients(standard, 1000, ).
+nutrients(standard, 1200, )
+nutrients(standard, 1400, )
+nutrients(standard, 1600,)
+nutrients(standard, 1800,)
+nutrients(standard, 2000,)
+nutrients(standard, 2200,)
+nutrients(standard, 2400,)
+nutrients(standard, 2600,)
+nutrients(standard, 2800,)
+nutrients(standard, 3000,)
+nutrients(standard, 3200,)
