@@ -27,6 +27,8 @@ nutrition(bacon,117,3.5,0.4,11).
 nutrition(groundPork_96,52,9,0.2,1.8).
 nutrition(groundPork_72,111,6.5,0.4,9).
 
+nutrition(egg,26,2,0.2,1.7).
+
 % vegetable
 nutrition(broccoli,11,0.9,2.1,0.1).
 nutrition(kale,12,1.1,2.2,0.2).
@@ -56,13 +58,11 @@ nutrition(mango,12,0.2,3,0.1).
 % dairy
 nutrition(milk,18,1,1.5,1).
 nutrition(cheese,113,7,0.4,9).
-nutrition(egg,26,2,0.2,1.7).
+
 
 % 
-nutrition(oil,240,0,0,27).
+nutrition(vegetableOil,240,0,0,27).
 nutrition(butter,203,0.2,0,23).
-
-
 
 %% Cateories
 beef(groundBeef_80).
@@ -95,8 +95,6 @@ grain(potato).
 grain(rice).
 grain(pasta).
 grain(bread).
-grain(beans).
-grain(tofu).
 
 fruit(apple).
 fruit(grapes).
@@ -108,11 +106,15 @@ dairy(milk).
 dairy(cheese).
 dairy(egg).
 
-seasoning(oil).
-seasoning(butter).
+oil(vegetableOil).
+oil(butter).
 
 meat(X): beef(X).
 meat(X): pork(X).
 meat(X): fish(X).
 
+protein(X): meat(X).
+protein(tofu).
+protein(beans): not vegetable(beans).
+vegetable(beans): not protein(beans).
 
