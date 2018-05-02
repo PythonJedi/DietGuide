@@ -107,7 +107,6 @@ fruit(avocado).
 
 dairy(milk).
 dairy(cheese).
-dairy(egg).
 
 oil(vegetableOil).
 oil(butter).
@@ -116,6 +115,7 @@ meat(X): beef(X).
 meat(X): pork(X).
 meat(X): fish(X).
 
+protein(egg).
 protein(X): meat(X).
 protein(tofu).
 protein(beans):- not vegetable(beans).
