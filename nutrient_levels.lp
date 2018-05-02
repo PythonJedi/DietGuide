@@ -19,35 +19,39 @@
 */
 
 /*
-*  calories, Protein, Dairy, Oil, Vegetables, Fruits, Grains
-*  Unit by oz
+*  calories, Protein/ oz-eq, Dairy/ c-eq, Oil/ g, Vegetables/ c-eq, Fruits/ c-eq, Grains/ oz-eq
+*  
 */
 
 
 
-nutrients(standard, 1000, 2,   16, 0.53,  8,  8,  3).
-nutrients(standard, 1200, 3,   20,  0.6, 12,  8,  4).
-nutrients(standard, 1400, 4,   20,  0.6, 12, 12,  5).
-nutrients(standard, 1600, 5,   24, 0.78, 16, 12,  5).
-nutrients(standard, 1800, 5,   24, 0.85, 20, 12,  6).
-nutrients(standard, 2000, 5.5, 24, 0.95, 20, 16,  7).
-nutrients(standard, 2200, 6,   24, 1.02, 24, 16,  7).
-nutrients(standard, 2400, 6.5, 24, 1.09, 24, 16,  8).
-nutrients(standard, 2600, 6.5, 24, 1.20, 28, 16,  9).
-nutrients(standard, 2800, 7,   24, 1.27, 28, 20, 10).
-nutrients(standard, 3000, 7,   24, 1.55, 32, 20, 10).
-nutrients(standard, 3200, 7,   24, 1.80, 32, 20, 10).
+nutrients(standard, 1000, 2,   2,   15,   1,   1,  3).
+nutrients(standard, 1200, 3,   2.5, 17, 1.5,   1,  4).
+nutrients(standard, 1400, 4,   2.5, 27, 1.5, 1.5,  5).
+nutrients(standard, 1600, 5.5,   2, 22,   2,   2,  5).
+nutrients(standard, 1800, 6,   2,   24, 2.5,   2,  6).
+nutrients(standard, 2000, 6.5, 2,   27, 2.5, 2.5,  7).
+nutrients(standard, 2200, 7,   2,   29,   3, 2.5,  7).
+nutrients(standard, 2400, 7.5, 2.5, 31,   3, 2.5,  8).
+nutrients(standard, 2600, 7.5, 2.5, 34, 3.5, 2.5,  9).
+nutrients(standard, 2800, 8,   2.5, 36, 3.5,   3, 10).
+nutrients(standard, 3000, 8,   2.5, 44,   4,   3, 10).
+nutrients(standard, 3200, 8,   2.5, 51,   4,   3, 10).
 
 
-nutrients(vegetarian, 1000, 1,   16, 0.53,  8,  8,    3).
-nutrients(vegetarian, 1200, 1.5, 20,  0.6, 12,  8,    4).
-nutrients(vegetarian, 1400, 2,   20,  0.6, 12, 12,    5).
-nutrients(vegetarian, 1600, 2.5, 24, 0.78, 16, 12,  5.5).
-nutrients(vegetarian, 1800, 3,   24, 0.85, 20, 12,  6.5).
-nutrients(vegetarian, 2000, 3.5, 24, 0.95, 20, 16,  6.5).
-nutrients(vegetarian, 2200, 3.5, 24, 1.02, 24, 16,  7.5).
-nutrients(vegetarian, 2400, 4,   24, 1.09, 24, 16,  8.5).
-nutrients(vegetarian, 2600, 4.5, 24, 1.20, 28, 16,  9.5).
-nutrients(vegetarian, 2800, 5,   24, 1.27, 28, 20, 10.5).
-nutrients(vegetarian, 3000, 5.5, 24, 1.55, 32, 20, 10.5).
-nutrients(vegetarian, 3200, 6,   24, 1.80, 32, 20, 10.5).
+nutrients(vegetarian, 1000, 1,   2,   15,   1,   1,   3).
+nutrients(vegetarian, 1200, 1.5, 2.5, 17, 1.5,   1,   4).
+nutrients(vegetarian, 1400, 2,   2.5, 17, 1.5, 1.5,   5).
+nutrients(vegetarian, 1600, 2.5, 3,   22,   2, 1.5,  5.5).
+nutrients(vegetarian, 1800, 3,   3,   24, 2.5, 1.5,  6.5).
+nutrients(vegetarian, 2000, 3.5, 3,   27, 2.5,   2,  6.5).
+nutrients(vegetarian, 2200, 3.5, 3,   29,   3,   2,  7.5).
+nutrients(vegetarian, 2400, 4,   3,   31,   3,   2,  8.5).
+nutrients(vegetarian, 2600, 4.5, 3,   34, 3.5,   2,  9.5).
+nutrients(vegetarian, 2800, 5,   3,   35, 3.5,  2.5, 10.5).
+nutrients(vegetarian, 3000, 5.5, 3,   44,   4,  2.5, 10.5).
+nutrients(vegetarian, 3200, 6,   3,   51,   4,  2.5, 10.5).
+
+
+
+

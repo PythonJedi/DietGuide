@@ -3,7 +3,10 @@
 *  format is "foodName, calories, protein, fat, carbohydrate" 
 *  calories, protein, fat, carbohydrate based on 1 oz.
 *  All data from google
+*  calories, Protein/ oz-eq, Dairy/ c-eq, Oil/ g, Vegetables/ c-eq, Fruits/ c-eq, Grains/ oz-eq
+*  
 */
+
 
 % beef
 nutrition(groundBeef_80,72,5,0,6).
@@ -29,16 +32,16 @@ nutrition(groundPork_72,111,6.5,0.4,9).
 
 nutrition(egg,26,2,0.2,1.7).
 
-% vegetable
-nutrition(broccoli,11,0.9,2.1,0.1).
-nutrition(kale,12,1.1,2.2,0.2).
-nutrition(carrot,12,0.3,3,0.05).
-nutrition(brusselSprout,13,1,2.6,0.1).
-nutrition(lettuce,0.6,0.06,0.15,0.01)
-nutrition(spinach,7,0.9,1.1,0.1).
-nutrition(arugula,7,0.73,1,0.2).
+% vegetable c-eq
+nutrition(broccoli,31,2.6,6,0.3).
+nutrition(kale,66,5.8,12,1.2).
+nutrition(carrot,50,1.1,12,0.3).
+nutrition(brusselSprout,38,3,8,0.3).
+nutrition(lettuce,10,1,2,0.2)
+nutrition(spinach,14,1.8,2.2,0.2).
+nutrition(arugula,12,1.2,1.6,0.4).
 
-% grain
+% grain oz-eq
 nutrition(potato,27,0.42,3.61,1.26).
 nutrition(rice,37,0.67,8.14,0.05).
 nutrition(pasta,28,1,5,0.12).
@@ -46,23 +49,23 @@ nutrition(bread,79,2.7,15,1).
 nutrition(beans,80,5,15,0.3).
 nutrition(tofu,23,2.5,0.6,1.5).
 
-% fruit
-nutrition(apple,8,0,2,0). 
-nutrition(grapes,8,0.1,2,0).
-nutrition(strawberry,5,0.1,1.3,0).
-nutrition(Banana,17,10.2,4,0).
-nutrition(avocado,30,0.36,1.6,2.6).
-nutrition(mango,12,0.2,3,0.1).
+% fruit c-eq
+nutrition(apple,57,0.3,15,0.2). 
+nutrition(grapes,62,0.6,16,0.3).
+nutrition(strawberry,47,1,11,0.4).
+nutrition(banana,133,1.6,34,0.5).
+nutrition(avocado,234,2.9,12,21).
+nutrition(mango,99,1.4,25,0.6).
 
 
-% dairy
-nutrition(milk,18,1,1.5,1).
-nutrition(cheese,113,7,0.4,9).
+% dairy c-eq
+nutrition(milk,244,8,12,8).
+nutrition(cheese,455,28,1.4,37).
 
 
-% 
-nutrition(vegetableOil,240,0,0,27).
-nutrition(butter,203,0.2,0,23).
+% oil  g
+nutrition(vegetableOil,8.84,0,0,1).
+nutrition(butter,7.17,0.09,0,0.81).
 
 %% Cateories
 beef(groundBeef_80):- not beef(steak), beef(brisket).
@@ -89,7 +92,7 @@ vegetable(carrot).
 vegetable(brusselSprout).
 vegetable(spinach).
 vegetable(arugula).
-vegetable(lettuce)
+vegetable(lettuce)2
 
 grain(potato).
 grain(rice):- not grain(pasta).
