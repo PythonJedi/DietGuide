@@ -65,23 +65,23 @@ nutrition(vegetableOil,240,0,0,27).
 nutrition(butter,203,0.2,0,23).
 
 %% Cateories
-beef(groundBeef_80).
-beef(steak).
-beef(brisket).
+beef(groundBeef_80):- not beef(steak), beef(brisket).
+beef(steak):- not beef(brisket), not beef(groundBeef_80).
+beef(brisket):- not beef(steak), not beef(groundBeef_80).
 
-chicken(chickenBreast).
-chicken(chickenThigh).
+chicken(chickenBreast):- not chicken(chickenThigh).
+chicken(chickenThigh):- not chicken(chickenBreast).
 
-fish(salmon).
-fish(halibut).
-fish(trout).
-fish(tuna).
-fish(tilapia).
+fish(salmon):- not fish(halibut), not fish(trout), not fish(tuna), not fish(tilapia).
+fish(halibut):- not fish(salmon), not fish(trout), not fish(tuna), not fish(tilapia).
+fish(trout):- not fish(salmon), not fish(halibut), not fish(tuna), not fish(tilapia).
+fish(tuna):- not fish(salmon), not fish(halibut), not fish(trout), not fish(tilapia).
+fish(tilapia):- not fish(salmon), not fish(halibut), not fish(trout), not fish(tuna).
 
 pork(porkLoin).
 pork(bacon).
-pork(groundPork_96).
-pork(groundPork_72).
+pork(groundPork_96):- not pork(groundPork_72).
+pork(groundPork_72):- not pork(groundPork_96).
 
 vegetable(broccoli).
 vegetable(kale).
@@ -92,8 +92,8 @@ vegetable(arugula).
 vegetable(lettuce)
 
 grain(potato).
-grain(rice).
-grain(pasta).
+grain(rice):- not grain(pasta).
+grain(pasta):- not grain(rice).
 grain(bread).
 
 fruit(apple).
@@ -115,6 +115,6 @@ meat(X): fish(X).
 
 protein(X): meat(X).
 protein(tofu).
-protein(beans): not vegetable(beans).
-vegetable(beans): not protein(beans).
+protein(beans):- not vegetable(beans).
+vegetable(beans):- not protein(beans).
 
