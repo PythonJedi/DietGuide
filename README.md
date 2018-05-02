@@ -1,2 +1,2 @@
 # DietGuide
-Using  SASPfor diet  recommendation, (prolog, computation logic)
+Using  SASP for diet  recommendation, (prolog, computation logic)
