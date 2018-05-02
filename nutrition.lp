@@ -115,6 +115,6 @@ meat(X): fish(X).
 
 protein(X): meat(X).
 protein(tofu).
-protein(beans): not grain(beans).
-grain(beans): not protein(beans).
+protein(beans): not vegetable(beans).
+vegetable(beans): not protein(beans).
 
