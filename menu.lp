@@ -3,14 +3,15 @@
  */
 
 % our user's info
-age(22).
+age(28).
 activity(sedentary).
 sex(male).
 
 % restrictions here:
 
 unacceptable(X) :- meat(X).
-unacceptabe(tofu).
+unacceptabe(spinach).
+unacceptable(blueberry).
 
 % desired variety:
 proteins(2).
@@ -56,11 +57,11 @@ _menu(Menu, Plan) :-
     oils(NumOils), GramPerOil is GramOil/NumOils,
 
     _fill_oils(NumOils, GramPerOil, Oils),
-    _fill_vegetables(NumVegetables, CupPerVegetable, Veggies),
-    _fill_fruits(NumFruits, CupPerFruit, Fruits),
+    _fill_proteins(NumProteins, OzPerProtein, Proteins),
     _fill_grains(NumGrains, OzPerGrain, Grains),
     _fill_dairies(NumDairies, CupPerDairy, Dairies),
-    _fill_proteins(NumProteins, OzPerProtein, Proteins),
+    _fill_vegetables(NumVegetables, CupPerVegetable, Veggies),
+    _fill_fruits(NumFruits, CupPerFruit, Fruits),
 
     _append(Proteins, Veggies, SM1),
     _append(SM1, Fruits, SM2),

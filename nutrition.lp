@@ -116,7 +116,7 @@ meat(X) :- pork(X).
 meat(X) :- fish(X).
 
 protein(egg).
-protein(X): meat(X).
+protein(X):- meat(X).
 protein(tofu).
 protein(beans):- not vegetable(beans).
 vegetable(beans):- not protein(beans).
